@@ -6,7 +6,7 @@ The measurements in this experiment were collected using the `clock()` function 
 
 ## Observed Performance Differences
 
-In the instrumentation_lab experiment, the PROCESS phase consistently consumed the most time (average 0.000329 seconds), followed by BUILD_DATA (average 0.000306 seconds), while REDUCE was the fastest (average 0.000138 seconds).
+The recorded results show a clear difference between algorithms. In the `comparison_algorithms` experiment, the naive implementation averaged approximately **2.787028** seconds, while the single-pass implementation averaged only **0.000148** seconds. This means the naive algorithm was roughly **18,831** times slower than the optimized version. This result is consistent with complexity theory: the naive algorithm runs in O(N²) due to its nested loops, whereas the single-pass version runs in O(N). In the `instrumentation_lab` experiment, the PROCESS phase consistently consumed the most time (average **0.000329** seconds), followed by BUILD_DATA (average **0.000306** seconds), while REDUCE was the fastest (average **0.000138** seconds). This suggests that arithmetic operations involving division and modulo (present in PROCESS) are more expensive than simple additions or multiplications.
 
 ## Relation Between Runtime and Energy Consumption
 
