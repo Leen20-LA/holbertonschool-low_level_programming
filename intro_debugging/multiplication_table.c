@@ -19,3 +19,11 @@ void print_table(int size)
 		printf("\n");
 	}
 }
+
+/* -- DO NOT Modify the code below this line -- */
+
+int main(void)
+{
+    print_table(4);
+    return 0;
+}
