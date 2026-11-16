@@ -1,13 +1,12 @@
-
 #include "main.h"
 #include <stdlib.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * create_array - creates an array of chars and initializes it with a char
+ * @size: the size of the array
+ * @c: the character to initialize the array with
  *
- * Return: Nothing.
+ * Return: pointer to the array, or NULL if size is 0 or malloc fails
  */
 char *create_array(unsigned int size, char c)
 {
@@ -20,11 +19,12 @@ char *create_array(unsigned int size, char c)
 	}
 
 	arr = malloc(sizeof(char) * size);
+
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
-	
+
 	for (i = 0; i < size; i++)
 	{
 		arr[i] = c;
