@@ -12,22 +12,26 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *array;
+	char *arr;
 	unsigned int i;
 
 	if (size == 0)
-		return (NULL);
-
-	array = malloc(size * sizeof(char));
-	if (array == NULL)
-		return (NULL);
-
-	for (i = 0; i < size; i++)
 	{
-		array[i] = c;
+		return (NULL);
 	}
 
-	return (array);
+	arr = malloc(sizeof(char) * size);
+	if (arr == NULL)
+	{
+		return (NULL);
+	}
+	
+	for (i = 0; i < size; i++)
+	{
+		arr[i] = c;
+	}
+
+	return (arr);
 }
 
 void simple_print_buffer(char *buffer, unsigned int size)
